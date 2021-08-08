@@ -1,0 +1,33 @@
+.rightfriendlist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.rightBarfriend {
+  display: flex;
+  align-content: center;
+  margin-bottom: 15px;
+}
+.righbarimgContianert {
+  margin-right: 10px;
+  position: relative;
+}
+.rightbarprofileimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.rightbaronline {
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border: 2px solid #ffff;
+}
+.rightbarusername {
+  font-weight: 500;
+}

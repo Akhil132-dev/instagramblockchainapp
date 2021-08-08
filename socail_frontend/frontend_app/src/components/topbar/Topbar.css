@@ -1,0 +1,86 @@
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* .topbar logo  */
+.topbar__logo {
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+/* topbar serachbar  */
+.topbar__center_search {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+.search__icon {
+  font-size: 20px !important;
+}
+.search_input {
+  border: none;
+  width: 70%;
+  outline: none !important;
+}
+/* topbar__left */
+.topbar__left {
+  flex: 3;
+}
+/* topbar__center */
+.topbar__center {
+  flex: 5;
+}
+/* topbar__right */
+.topbar__right {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+.topbar_r_Icons {
+  display: flex;
+  align-items: center;
+}
+.topobar_r_IconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.topbar_r_IconBadge {
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.topbar_r_links {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* topbar image */
+.topbar__Image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
