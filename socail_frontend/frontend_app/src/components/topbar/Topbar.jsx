@@ -50,7 +50,7 @@ function Topbar() {
           </div>
         </div>
         <Link to={`profile/${user.username}`}>
-        <img src={user.profilePicture ?  PF+user.profilePicture : 'assets/person/lg.jpg'} alt="" className="topbar__Image" />
+        <img src={user?.profilePicture ?  user?.profilePicture : '/assets/person/lg.jpg'} alt="" className="topbar__Image" />
         </Link>
       </div>
     </div>

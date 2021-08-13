@@ -3,22 +3,18 @@ import authReducer from "./Reducer";
 const INITIAL_STATE = {
   // we are not loged in so user it null
   user: {
-    _id: "60fffc77a7894a1338dd56d6",
+    _id: "60fffc6fa7894a1338dd56d4",
     coverPicture: "",
     profilePicture: "",
     followers: [],
-    following: ["60fffc6fa7894a1338dd56d4"],
+    following: [],
     isAdmin: false,
-    username: "akhilesh4",
-    email: "akhil@145gmail.com",
-    passward: "$2b$10$6AbveAKXIW.SZPUPVD8ywukYohQTlvDFDAzlPBcTMhKApYl9c/xZu",
-    createdAt: { $date: { $numberLong: "1627389047118" } },
-    updatedAt: { $date: { $numberLong: "1627639236170" } },
+    username: "akhilesh",
+    email: "akhil@14gmail.com",
+    passward: "$2b$10$SweAA4fX3J7L8J23toxyJ.EEf5XLTd3JCrLb3EL29/UVzBVjrbFO.",
+    createdAt: { $date: { $numberLong: "1627389039729" } },
+    updatedAt: { $date: { $numberLong: "1628662218008" } },
     __v: { $numberInt: "0" },
-    city: "Bhopal",
-    from: "Indai",
-    relationship: { $numberInt: "1" },
-    desc: "a Computer Science enginner",
   },
   // we are not fecthing anything in the start to @param isFecthing is false by default
   isFecthing: false,
@@ -35,6 +31,7 @@ export const AuthContext = createContext(INITIAL_STATE);
  * Authcontext create a context that we can use where we want to use
  *
  */
+
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_STATE);
   return (

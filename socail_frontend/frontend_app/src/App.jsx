@@ -6,12 +6,16 @@ import Login from "./pages/login/Login.jsx";
 import Profile from "./pages/Profile.jsx";
 import Register from "./pages/Register/Register.jsx";
 import { AuthContext } from "./context/AuthContext";
+import { Message } from "@material-ui/icons";
+import Messenge from "./messenge/massenge.jsx";
 function App() {
   
  const {user, isFecthing,error, dispatch} = useContext(AuthContext)
 
   console.log(user)
   return (
+
+    
 
     <Router>
       <Switch>
@@ -26,6 +30,12 @@ function App() {
         <Route path="/login">
           {
             user? <Redirect to='/'/> :  <Login />
+          }
+         
+        </Route>
+        <Route path="/chat">
+          {
+             user?  <Messenge/> :<Redirect to='/'/> 
           }
          
         </Route>

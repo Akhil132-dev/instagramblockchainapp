@@ -31,7 +31,7 @@ console.log(Post)
       try {
         //getting the user from the data base using post id 
         const res = await axios.get(`/users?userId=${Post.userId}`);
-        console.log(res.data)
+        // console.log(res.data)
        setUser(res.data)  
       } catch (err) {
         console.log(err);
@@ -47,14 +47,14 @@ console.log(Post)
       
           <div className="post_top_left">    <Link to={`profile/${User.username}`}>
            <img
-              src={User.profilePicture?User.profilePicture : 'assets/person/lg.jpg'}
+              src={User?.profilePicture?User?.profilePicture : '/assets/person/lg.jpg'}
               className="postProfileimage"
               alt=""
             />
           </Link>
            
             <span className="postusername">
-              {User.username}
+              {User?.username}
             </span>
             <span className="postdate">{format(Post.createdAt)}</span>
           </div>
@@ -64,7 +64,7 @@ console.log(Post)
         </div>
         <div className="post__wrapper_center">
           <span className="postText">{Post.desc}</span>
-          <img className="post__image" src={PF+Post.img} alt="" />
+          <img className="post__image" src={Post.img} alt="" />
         </div>
         <div className="post__wrapper_bottum">
           <div className="post__bottum_left">

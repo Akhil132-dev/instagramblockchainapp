@@ -11,13 +11,14 @@ function Feed({username}) {
   const [text, settext] = useState("");
 const {user} = useContext(AuthContext)
 
-console.log(user._id.$oid)
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const res = username ?  await axios.get(`/posts/profile/`+username):await axios.get(`/posts/timeline/`+user._id);
         console.log(res)
-      setPost(res.data)
+      setPost(res.data.sort((p1,p2)=>{
+        return new Date(p2.createdAt) - new Date(p1.createdAt)
+      }))
       } catch (err) {
         console.log(err);
       }
@@ -28,7 +29,7 @@ console.log(user._id.$oid)
   return (
     <div className="feed">
       <div className="feedwrapper">
-        <Share />
+     {!username || (username === user.username) && <Share /> }  
         {post.map((p) => (
           <Post key={p._id} Post={p} />
         ))}

@@ -11,6 +11,7 @@ import { useParams } from "react-router";
 
 function Profile() {
    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+   const username  = useParams().username;
    const [user, setUser] = useState({})
      useEffect(() => {
     const fetchUser= async () => {
@@ -26,7 +27,6 @@ function Profile() {
     fetchUser();
   }, [username]);
   // it will give u the url username from the url 
-  const username  = useParams().username;
   
 
   return (
@@ -40,7 +40,7 @@ function Profile() {
             <div className="profile__cover">
 
               <img src={user.coverPicture || PF+"post/8.jpeg"}alt="" className="profile__cover__img" />
-              <img src={user.profilePicture || PF+"post/1.jpeg"} alt="" className="profile__user__img" />
+              <img src={user.profilePicture || "/assets/person/lg.jpg"} alt="" className="profile__user__img" />
          
             </div>
             <div className="profile__info">

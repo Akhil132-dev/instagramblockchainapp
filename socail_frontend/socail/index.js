@@ -8,6 +8,8 @@ import authRouter from "./rotues/auth.js";
 import postRoute from "./rotues/post.js";
 import multer from "multer";
 import path from "path";
+import conversataion from "./rotues/Conversation.js";
+import message from "./rotues/Message.js";
 
 const app = express();
 dotenv.config();
@@ -33,6 +35,8 @@ app.post("/api/upload", (req, res) => {
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/posts", postRoute);
+app.use("/api/chat", conversataion);
+app.use("/api/message", message);
 /** Permissible loading a single file, 
     the value of the attribute "name" in the form of "recfile". **/
 
